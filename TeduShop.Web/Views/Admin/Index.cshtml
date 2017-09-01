@@ -5,16 +5,53 @@
 
 <!DOCTYPE html>
 
-<html ng-app>
+<html ng-app ="myModule">
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
     <script src="~/Scripts/plugin/angular/angular.js"></script>
-
+    <script src="~/Scripts/spa/app.js"></script>
 </head>
-<body>
-    <div> 
+<body> 
+    <div ng-controller="myTeacher"> 
         10 + 20 = {{10+20}}
+        <br />
+        This is from child: {{message}}
     </div>
+
+    <div ng-controller="myStudent">
+        This is form child: {{message}}
+    </div>
+    <div ng-controller="mySchool">
+        This is from parents: {{message}} 
+    </div>
+    <div>
+        this is range Effective: {{message}}
+    </div>
+    <br />
+    
+    <div ng-controller="myProvince">
+        <div>
+            Root: {{message}}
+        </div>
+        <div ng-controller="myHome">
+            Home: {{message}}
+        </div>
+    </div>
+
+    <br />
+    <br />
+    <div ng-controller="testService">
+        <input type="number" ng-model="txtNum" />
+        <br />
+        value of input text is: {{txtNum}}
+        
+        <br />
+        <button ng-click="kiemtra()">Check number</button>
+        <br />
+        {{thongbao}}
+    </div>
+
+    <test-Directive></test-Directive>
 </body>
 </html>

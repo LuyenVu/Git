@@ -232,6 +232,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\components\filters\statusFilter.js" />
     <Content Include="app\components\home\HomeController.js" />
     <Content Include="app\components\home\HomeView.html" />
     <Content Include="app\components\products\products.module.js" />

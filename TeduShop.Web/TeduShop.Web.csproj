@@ -250,6 +250,7 @@
     <Content Include="app\shared\directives\pagerDirective.js" />
     <Content Include="app\shared\module\tedushop.common.js" />
     <Content Include="app\shared\services\apiService.js" />
+    <Content Include="app\shared\services\notificationService.js" />
     <Content Include="Assets\admin\css\AdminLTE.css" />
     <Content Include="Assets\admin\css\AdminLTE.min.css" />
     <Content Include="Assets\admin\css\alt\AdminLTE-bootstrap-social.css" />
@@ -595,6 +596,10 @@
     <Content Include="Assets\admin\libs\slim-scroll\test2\index.html" />
     <Content Include="Assets\admin\libs\slim-scroll\test\index.html" />
     <Content Include="Assets\admin\libs\slim-scroll\test\slimscroll.css" />
+    <Content Include="Assets\admin\libs\toastr\toastr.css" />
+    <Content Include="Assets\admin\libs\toastr\toastr.js" />
+    <Content Include="Assets\admin\libs\toastr\toastr.min.css" />
+    <Content Include="Assets\admin\libs\toastr\toastr.min.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -823,6 +828,13 @@
     <Content Include="Assets\admin\libs\slim-scroll\.bower.json" />
     <Content Include="Assets\admin\libs\slim-scroll\LICENSE" />
     <Content Include="Assets\admin\libs\slim-scroll\README.md" />
+    <Content Include="Assets\admin\libs\toastr\.bower.json" />
+    <Content Include="Assets\admin\libs\toastr\bower.json" />
+    <Content Include="Assets\admin\libs\toastr\LICENSE" />
+    <Content Include="Assets\admin\libs\toastr\README.md" />
+    <Content Include="Assets\admin\libs\toastr\toastr.js.map" />
+    <Content Include="Assets\admin\libs\toastr\toastr.less" />
+    <Content Include="Assets\admin\libs\toastr\toastr.scss" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts_lythuyetAngJs\plugin\angular\.bower.json" />
     <Content Include="Scripts_lythuyetAngJs\plugin\angular\angular.min.js.gzip" />

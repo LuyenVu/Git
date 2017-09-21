@@ -6,6 +6,7 @@ namespace TeduShop.Web.Models
     public class PostCategoryViewModel
     {
         public int ID { set; get; }
+
         public string Name { set; get; }
 
         public string Alias { set; get; }

@@ -228,6 +228,10 @@
     <Compile Include="Migrations\201708310811222_Seek4DataTemplate.Designer.cs">
       <DependentUpon>201708310811222_Seek4DataTemplate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709230834553_addTagsField.cs" />
+    <Compile Include="Migrations\201709230834553_addTagsField.Designer.cs">
+      <DependentUpon>201709230834553_addTagsField.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\PostCategoryViewModel.cs" />
     <Compile Include="Models\PostTagViewModel.cs" />
@@ -4664,6 +4668,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708310811222_Seek4DataTemplate.resx">
       <DependentUpon>201708310811222_Seek4DataTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709230834553_addTagsField.resx">
+      <DependentUpon>201709230834553_addTagsField.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

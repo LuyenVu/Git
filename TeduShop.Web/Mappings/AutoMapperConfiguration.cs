@@ -29,6 +29,7 @@ namespace TeduShop.Web.Mappings
             CreateMap<Product, ProductViewModel>();
             CreateMap<ProductTag, ProductTagViewModel>();
             CreateMap<Footer, FooterViewModel>();
+            CreateMap<Slide, SlideViewModel>();
         }
         //
     }

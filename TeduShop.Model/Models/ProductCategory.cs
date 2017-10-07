@@ -5,6 +5,7 @@ using TeduShop.Model.Abstract;
 
 namespace TeduShop.Model.Models
 {
+    [Table("ProductCategories")]
     public class ProductCategory : Auditable
     {
         [Key]

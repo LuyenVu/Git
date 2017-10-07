@@ -1,5 +1,7 @@
 ﻿namespace TeduShop.Web.Migrations
 {
+    using Common;
+    using Data;
     using Model.Models;
     using System.Collections.Generic;
     using System.Data.Entity.Migrations;
@@ -69,6 +71,15 @@
                 context.SaveChanges();
             }
         }
+
+        private void CreateFooter(TeduShopDbContext context)
+        {
+            if (context.Footers.Count(x => x.ID == CommonConstants.DefaultFooterId) == 0)
+            {
+                string content = "";
+            }
+        }
+
 
     }
  

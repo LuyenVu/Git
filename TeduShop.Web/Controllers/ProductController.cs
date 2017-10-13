@@ -16,11 +16,13 @@ namespace TeduShop.Web.Controllers
     {
         IProductService _productService;
         IProductCategoryService _productCategoryService;
+
         public ProductController(IProductService productService, IProductCategoryService productCategoryService)
         {
             this._productService = productService;
             this._productCategoryService = productCategoryService;
         }
+        
         // GET: Product
         public ActionResult Detail(int productId)
         {

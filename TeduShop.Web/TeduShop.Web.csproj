@@ -241,6 +241,10 @@
     <Compile Include="Migrations\201710070718100_addContent_Slide.Designer.cs">
       <DependentUpon>201710070718100_addContent_Slide.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710140915059_addQuantityField.cs" />
+    <Compile Include="Migrations\201710140915059_addQuantityField.Designer.cs">
+      <DependentUpon>201710140915059_addQuantityField.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\FooterViewModel.cs" />
     <Compile Include="Models\HomeViewModel.cs" />
@@ -5441,6 +5445,7 @@
     <Content Include="Views\Shared\Category.cshtml" />
     <Content Include="Views\Product\Category.cshtml" />
     <Content Include="Views\Product\Search.cshtml" />
+    <Content Include="Views\Product\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TeduShop.common\TeduShop.common.csproj">
@@ -5478,6 +5483,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710070718100_addContent_Slide.resx">
       <DependentUpon>201710070718100_addContent_Slide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710140915059_addQuantityField.resx">
+      <DependentUpon>201710140915059_addQuantityField.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

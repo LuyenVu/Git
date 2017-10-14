@@ -14,7 +14,7 @@
                         <ul class="cute">
                             @foreach (var childCategory in childCategories)
                             {
-                                var childUrl = "/" + childCategory.Alias + ".pc-" + childCategory.ID + ".html";
+                                var childUrl = "/" + childCategory.Alias + ".pc-" + childCategory.ID + ".cshtml";
                                 <li class="subitem3"><a href="@childUrl">@childCategory.Name</a></li>
                             }
 

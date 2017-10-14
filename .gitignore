@@ -287,3 +287,4 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 TeduShop.Web/UpdatedFiles/
+/TeduShop.Web/Assets/admin/libs/jquery-ui

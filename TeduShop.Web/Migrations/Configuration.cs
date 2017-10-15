@@ -25,6 +25,7 @@
             CreateSlide(context);
             //  This method will be called after migrating to the latest version.
             CreatePage(context);
+            CreateContactDetail(context);
 
         }
 
@@ -148,7 +149,42 @@
             }
         }
 
+        private void CreateContactDetail(TeduShopDbContext context)
+        {
+            if (context.ContactDetails.Count() == 0)
+            {
+                try
+                {
+                    var contactDetail = new TeduShop.Model.Models.ContactDetail()
+                    {
+                        Name = "Shop thời trang TEDU",
+                        Address = "322 Điện Biên Phủ, P.22, Quận Bình Thạnh, TP. Hồ Chí Minh",
+                        Email = "luyenvu8x@gmail.com",
+                        Lat = 21.0633645,
+                        Lng = 105.8053274,
+                        Phone = "0977733852",
+                        Website = "http://tedu.com.vn",
+                        Other = "",
+                        Status = true
 
+                    };
+                    context.ContactDetails.Add(contactDetail);
+                    context.SaveChanges();
+                }
+                catch (DbEntityValidationException ex)
+                {
+                    foreach (var eve in ex.EntityValidationErrors)
+                    {
+                        Trace.WriteLine($"Entity of type \"{eve.Entry.Entity.GetType().Name}\" in state \"{eve.Entry.State}\" has the following validation error.");
+                        foreach (var ve in eve.ValidationErrors)
+                        {
+                            Trace.WriteLine($"- Property: \"{ve.PropertyName}\", Error: \"{ve.ErrorMessage}\"");
+                        }
+                    }
+                }
+
+            }
+        }
 
 
     }

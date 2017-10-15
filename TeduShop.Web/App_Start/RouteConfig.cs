@@ -28,6 +28,13 @@ namespace TeduShop.Web
                 );
 
             routes.MapRoute(
+            name: "Page",
+            url: "trang/{alias}.cshtml",
+            defaults: new { controller = "Page", action = "Index", alias = UrlParameter.Optional },
+            namespaces: new string[] { "TeduShop.Web.Controllers" }
+            );
+
+            routes.MapRoute(
                  name: "Product Category",
                  url: "{alias}.pc-{id}.cshtml",
                  defaults: new { controller = "Product", action = "Category", id = UrlParameter.Optional },

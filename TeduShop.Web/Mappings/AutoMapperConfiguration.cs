@@ -37,6 +37,7 @@ namespace TeduShop.Web.Mappings
             CreateMap<Slide, SlideViewModel>();
             CreateMap<Page, PageViewModel>();
             CreateMap<ContactDetail, ContactDetailViewModel>();
+            CreateMap<Feedback, FeedbackViewModel>();
         }
         //
     }

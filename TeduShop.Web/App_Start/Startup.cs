@@ -3,19 +3,20 @@ using System.Threading.Tasks;
 using Microsoft.Owin;
 using Owin;
 using Autofac;
-using Autofac.Integration.Mvc;
-using TeduShop.Data.Infrastructure;
-using TeduShop.Service;
-using System.Web.Http;
 using System.Reflection;
+using TeduShop.Data.Infrastructure;
+using TeduShop.Data.Repositories;
+using TeduShop.Service;
 using System.Web.Mvc;
+using System.Web.Http;
+using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
 using TeduShop.Data;
-using TeduShop.Data.Repositories;
 using Microsoft.AspNet.Identity;
-using System.Web;
-using Microsoft.Owin.Security.DataProtection;
 using TeduShop.Model.Models;
+using Microsoft.Owin.Security;
+using Microsoft.Owin.Security.DataProtection;
+using System.Web;
 
 [assembly: OwinStartup(typeof(TeduShop.Web.App_Start.Startup))]
 
@@ -65,6 +66,5 @@ namespace TeduShop.Web.App_Start
             GlobalConfiguration.Configuration.DependencyResolver = new AutofacWebApiDependencyResolver((IContainer)container); //Set the WebApi DependencyResolver
 
         }
-
     }
 }

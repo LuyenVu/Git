@@ -288,3 +288,4 @@ __pycache__/
 *.xsd.cs
 TeduShop.Web/UpdatedFiles/
 /TeduShop.Web/Assets/admin/libs/jquery-ui
+/TeduShop.Web/Assets/admin/libs

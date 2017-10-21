@@ -60,16 +60,20 @@
                 </li>
                 @{
                     var moreImages = (List<string>)ViewBag.MoreImages;
-                    if (moreImages.Count > 0)
+                    if (moreImages != null)
                     {
-                        foreach (var image in moreImages)
+                        if (moreImages.Count > 0)
                         {
-                            <li>
-                                <img class="etalage_thumb_image img-responsive" src="@image" />
-                                <img class="etalage_source_image img-responsive" src="@image" title="" />
-                            </li>
+                            foreach (var image in moreImages)
+                            {
+                                <li>
+                                    <img class="etalage_thumb_image img-responsive" src="@image" />
+                                    <img class="etalage_source_image img-responsive" src="@image" title="" />
+                                </li>
+                            }
                         }
                     }
+
                 }
 
 
@@ -82,7 +86,7 @@
             <h4>@Model.Name</h4>
             <div class="cart-b">
                 <div class="left-n ">@(Model.Price == 0 ? "Liên hệ" : Model.Price.ToString("N0"))</div>
-                <a class="now-get get-cart-in" href="/them-gio-hang/@Model.ID">Thêm vào giỏ hàng</a>
+                <a class="now-get get-cart-in" href="#" data-id="@Model.ID" id="btnAddToCart">Thêm vào giỏ hàng</a>
                 <div class="clearfix"></div>
             </div>
             <h6>@Model.Quantity sản phẩm trong kho</h6>
@@ -92,7 +96,7 @@
                 <ul class="taglist">
                     @foreach (var tag in (IEnumerable<TeduShop.Web.Models.TagViewModel>)ViewBag.Tags)
                     {
-                        <li><a href="/tag/@(tag.ID).cshtml">@(tag.Name), </a></li>
+                        <li><a href="/tag/@(tag.ID).html">@(tag.Name), </a></li>
                     }
 
                 </ul>

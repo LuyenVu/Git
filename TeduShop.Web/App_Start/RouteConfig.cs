@@ -43,6 +43,12 @@ namespace TeduShop.Web
               namespaces: new string[] { "TeduShop.Web.Controllers" }
                );
             routes.MapRoute(
+              name: "Checkout",
+              url: "thanh-toan.cshtml",
+              defaults: new { controller = "ShoppingCart", action = "Checkout", id = UrlParameter.Optional },
+              namespaces: new string[] { "TeduShop.Web.Controllers" }
+               );
+            routes.MapRoute(
                  name: "Search",
                  url: "tim-kiem.cshtml",
                  defaults: new { controller = "Product", action = "Search", id = UrlParameter.Optional },

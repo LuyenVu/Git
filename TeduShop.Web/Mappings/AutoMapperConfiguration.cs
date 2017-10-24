@@ -38,6 +38,10 @@ namespace TeduShop.Web.Mappings
             CreateMap<Page, PageViewModel>();
             CreateMap<ContactDetail, ContactDetailViewModel>();
             CreateMap<Feedback, FeedbackViewModel>();
+
+            CreateMap<ApplicationGroup, ApplicationGroupViewModel>();
+            CreateMap<ApplicationRole, ApplicationRoleViewModel>();
+            CreateMap<ApplicationUser, ApplicationUserViewModel>();
         }
         //
     }

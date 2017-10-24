@@ -13,7 +13,7 @@ namespace TeduShop.Data
     {
         public TeduShopDbContext() : base("TeduShopConnection")
         {
-            this.Configuration.LazyLoadingEnabled = false; //Call table parent only, not for childen
+            this.Configuration.LazyLoadingEnabled = false;
         }
 
         public DbSet<Footer> Footers { set; get; }
@@ -35,13 +35,17 @@ namespace TeduShop.Data
 
         public DbSet<Tag> Tags { set; get; }
 
+
+
         public DbSet<VisitorStatistic> VisitorStatistics { set; get; }
-
         public DbSet<Error> Errors { set; get; }
-
         public DbSet<ContactDetail> ContactDetails { set; get; }
-
         public DbSet<Feedback> Feedbacks { set; get; }
+
+        public DbSet<ApplicationGroup> ApplicationGroups { set; get; }
+        public DbSet<ApplicationRole> ApplicationRoles { set; get; }
+        public DbSet<ApplicationRoleGroup> ApplicationRoleGroups { set; get; }
+        public DbSet<ApplicationUserGroup> ApplicationUserGroups { set; get; }
 
         public static TeduShopDbContext Create()
         {
@@ -50,9 +54,11 @@ namespace TeduShop.Data
 
         protected override void OnModelCreating(DbModelBuilder builder)
         {
-            //Override method from EF, run it intinite 
-            builder.Entity<IdentityUserRole>().HasKey(i => new { i.UserId, i.RoleId });
-            builder.Entity<IdentityUserLogin>().HasKey(i => i.UserId);
+            builder.Entity<IdentityUserRole>().HasKey(i => new { i.UserId, i.RoleId }).ToTable("ApplicationUserRoles");
+            builder.Entity<IdentityUserLogin>().HasKey(i => i.UserId).ToTable("ApplicationUserLogins");
+            builder.Entity<IdentityRole>().ToTable("ApplicationRoles");
+            builder.Entity<IdentityUserClaim>().HasKey(i => i.UserId).ToTable("ApplicationUserClaims");
+
         }
     }
 }

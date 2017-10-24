@@ -14,8 +14,9 @@ using TeduShop.Web.Models;
 
 namespace TeduShop.Web.Api
 {
-    [RoutePrefix("api/product")]
+    
     [Authorize]
+    [RoutePrefix("api/product")]
     public class ProductController : ApiControllerBase
     {
         #region Initialize
@@ -61,6 +62,7 @@ namespace TeduShop.Web.Api
 
         [Route("getall")]
         [HttpGet]
+        [Authorize(Roles = "View")]
         public HttpResponseMessage GetAll(HttpRequestMessage request, string keyword, int page, int pageSize = 20)
         {
             return CreateHttpResponse(request, () =>

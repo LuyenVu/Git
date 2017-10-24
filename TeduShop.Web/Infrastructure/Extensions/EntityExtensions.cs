@@ -94,6 +94,7 @@ namespace TeduShop.Web.Infrastructure.Extensions
             product.Status = productVm.Status;
             product.Tags = productVm.Tags;
             product.Quantity = productVm.Quantity;
+            product.OriginalPrice = productVm.OriginalPrice;
         }
 
         public static void UpdateFeedback(this Feedback feedback, FeedbackViewModel feedbackVm)
@@ -134,6 +135,7 @@ namespace TeduShop.Web.Infrastructure.Extensions
             appRole.Name = appRoleViewModel.Name;
             appRole.Description = appRoleViewModel.Description;
         }
+
         public static void UpdateUser(this ApplicationUser appUser, ApplicationUserViewModel appUserViewModel, string action = "add")
         {
 
